@@ -2,8 +2,6 @@
 
 .hero {
     display: flex;
-    margin-left: 120px;
-    margin-right: 120px;
     background-color: #00c385;
     color: white;
     padding: 40px;
