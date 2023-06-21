@@ -4,7 +4,7 @@ import "./Home.css"
 export default function Home() {
   return (
     <div className="home">
-      <p>Home</p>
+      <h2>Best Selling Products</h2>
     </div>
   )
 }

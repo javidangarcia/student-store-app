@@ -1,0 +1,39 @@
+/* Hero */
+
+.hero {
+    display: flex;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: #00c385;
+    color: white;
+    padding: 40px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin: 0px;
+}
+
+.hero-text p {
+    font-size: 30px;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+}
+
+.hero-image img {
+    height: 150px;
+    width: 150px;
+}
