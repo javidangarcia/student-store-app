@@ -1,11 +1,19 @@
 import * as React from "react"
-import "./Home.css"
-import Hero from "../Hero/Hero"
+import "./ProductGrid.css"
+import ProductCard from "../ProductCard/ProductCard"
 
-export default function Home(props) {
+export default function ProductGrid(props) {
+  console.log(props.products);
   return (
-    <div class="product-grid">
-        
+    <div className="product-grid">
+        {
+
+        props.products.map( (product) => {
+          console.log(product);
+          return <ProductCard product={product}/>
+        })
+
+        }
     </div>
   )
 }
