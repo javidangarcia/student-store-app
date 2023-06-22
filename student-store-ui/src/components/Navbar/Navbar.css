@@ -2,9 +2,10 @@
     display: flex;
     justify-content: right;
     background-color: #2c4047;
-    color: white;
 }
 
-.navbar-options {
-    padding: 20px;
+.navbar a {
+    padding: 30px;
+    text-decoration: none;
+    color: white;
 }

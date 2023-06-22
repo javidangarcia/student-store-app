@@ -1,9 +1,22 @@
 .product-card {
     height: 350px;
     width: 250px;
+    background-color: white;
+    border: 3px solid #2c4047;
 }
 
 .product-card img {
     height: 250px;
-    width: 250px;
+    width: 244px;
+}
+
+.product-name {
+    font-weight: 600;
+    margin: 0px;
+    padding: 5px;
+}
+
+.product-price {
+    margin: 0px;
+    padding: 5px;
 }

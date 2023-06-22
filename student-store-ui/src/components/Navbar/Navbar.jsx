@@ -4,10 +4,10 @@ import "./Navbar.css"
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <p className="navbar-options">Home</p>
-      <p className="navbar-options">About Us</p>
-      <p className="navbar-options">Contact Us</p>
-      <p className="navbar-options">Buy Now</p>
+      <a href="/">Home</a>
+      <a href="/#About">About Us</a>
+      <a href="/#Contact">Contact Us</a>
+      <a href="/#Buy">Buy Now</a>
     </nav>
   )
 }
