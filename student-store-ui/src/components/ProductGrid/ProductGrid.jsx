@@ -3,13 +3,22 @@ import "./ProductGrid.css"
 import ProductCard from "../ProductCard/ProductCard"
 
 export default function ProductGrid(props) {
+  const {products, category} = props;
+
+  let filteredProducts;
+  if (category === "all categories") {
+    filteredProducts = products;
+  } else {
+    filteredProducts = products.filter( (product) => {return product.category === category} );
+    console.log(filteredProducts);
+  }
+
   return (
     <div className="product-grid">
       {
-
-      props.products.map( (product) => {
-        console.log(product);
-        return <ProductCard product={product}/>
+      
+      filteredProducts.map( (product) => {
+        return <ProductCard key={product.name} product={product}/>
       })
 
       }

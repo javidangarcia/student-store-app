@@ -3,15 +3,16 @@ import "./Home.css"
 import Hero from "../Hero/Hero"
 import ProductGrid from "../ProductGrid/ProductGrid"
 import Search from "../Search/Search"
-
+import { useState } from "react";
 
 export default function Home(props) {
+  const [selectedCategory, setSelectedCategory] = useState("all categories");
   return (
     <div className="home">
       <Hero />
-      <Search />
+      <Search categoryClick={setSelectedCategory}/>
       <h2 id="Buy">Best Selling Products</h2>
-      <ProductGrid products={props.products}/>
+      <ProductGrid products={props.products} category={selectedCategory}/>
       <div id="About" className="about">
         <h3>About</h3>
         <p>The codepath student store offers great products at great prices from a great team and for a great cause.</p>

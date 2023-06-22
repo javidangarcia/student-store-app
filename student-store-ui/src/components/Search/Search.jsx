@@ -1,19 +1,23 @@
 import * as React from "react"
 import "./Search.css"
 
+const categories = ["all categories", "clothing", "food", "accessories", "tech"]
+
 export default function Search(props) {
+  const {categoryClick} = props;
+
   return (
     <div className="search-filter-container">
         <div className="search-bar">
             <input type="text" name="search" placeholder="Search"/>
-            <button><i class="fa fa-search"></i></button>
+            <button><i className="fa fa-search"></i></button>
         </div>
         <div className="filter">
-            <p className="filter-options">All Categories</p>
-            <p className="filter-options">Clothing</p>
-            <p className="filter-options">Food</p>
-            <p className="filter-options">Accessories</p>
-            <p className="filter-options">Tech</p>
+            {
+            categories.map( (category) => {
+                return <button key={category} className="filter-options" onClick={() => categoryClick(category)}>{category}</button>
+            })
+            }
         </div>
     </div>
   )
