@@ -2,15 +2,17 @@ import * as React from "react"
 import "./ProductGrid.css"
 import ProductCard from "../ProductCard/ProductCard"
 
-export default function ProductGrid(props) {
-  const {products, category} = props;
+export default function ProductGrid({ products, selectedCategory, searchInput }) {
 
   let filteredProducts;
-  if (category === "all categories") {
+  if (selectedCategory === "all categories") {
     filteredProducts = products;
   } else {
-    filteredProducts = products.filter( (product) => {return product.category === category} );
-    console.log(filteredProducts);
+    filteredProducts = products.filter( (product) => {return product.category === selectedCategory} );
+  }
+
+  if (searchInput) {
+    filteredProducts = filteredProducts.filter( (product) => {return product.name.toLowerCase().includes(searchInput.toLowerCase())})
   }
 
   return (
