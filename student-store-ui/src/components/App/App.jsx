@@ -4,7 +4,8 @@ import "./App.css"
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
-import { useState } from "react";
+import { useState } from "react"
+import ProductDetail from "../ProductDetail/ProductDetail"
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,10 @@ export default function App() {
         <main>
           <Navbar />
           <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/product/:id" element={<ProductDetail />}></Route>
+          </Routes>
         </main>
       </BrowserRouter>
     </div>

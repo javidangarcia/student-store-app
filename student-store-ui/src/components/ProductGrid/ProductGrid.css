@@ -6,3 +6,8 @@
     margin-bottom: 20px;
     width: 100%;
 }
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
