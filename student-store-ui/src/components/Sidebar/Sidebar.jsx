@@ -1,10 +1,12 @@
 import * as React from "react"
 import "./Sidebar.css"
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen, toggleSidebar }) {
   return (
-    <section className="sidebar">
-      
+    <section className={isOpen ? "sidebar open" : "sidebar closed"}>
+      <button onClick={toggleSidebar}>
+        <i className={isOpen ? "material-icons md-48 arrow-open" : "material-icons md-48"}>arrow_forward</i>
+      </button>
     </section>
   )
 }

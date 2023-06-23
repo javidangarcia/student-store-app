@@ -1,36 +1,25 @@
 import * as React from "react"
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import "./App.css"
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function App() {
-  const [products, setProducts] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
-  useEffect( () => {
-    const fetchProducts = async () => {
-      try {
-        const url = "https://codepath-store-api.herokuapp.com/store";
-        const response = await axios.get(url);
-        const data = response.data
-        setProducts(data.products)
-      } catch(error) {
-        console.log(error)
-      }
-    }
-
-    fetchProducts();
-  }, []);
-
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  }
+  
   return (
     <div className="app">
       <BrowserRouter>
         <main>
           <Navbar />
-          <Home products={products}/>
+          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
+          <Home />
         </main>
       </BrowserRouter>
     </div>

@@ -3,11 +3,28 @@ import "./Home.css"
 import Hero from "../Hero/Hero"
 import ProductGrid from "../ProductGrid/ProductGrid"
 import Search from "../Search/Search"
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios';
 
-export default function Home({ products }) {
+export default function Home(props) {
   const [selectedCategory, setSelectedCategory] = useState("all categories");
   const [searchInput, setSearchInput] = useState("");
+  const [products, setProducts] = useState([]);
+
+  useEffect( () => {
+    const fetchProducts = async () => {
+      try {
+        const url = "https://codepath-store-api.herokuapp.com/store";
+        const response = await axios.get(url);
+        const data = response.data
+        setProducts(data.products)
+      } catch(error) {
+        console.log(error)
+      }
+    }
+
+    fetchProducts();
+  }, []);
 
   return (
     <div className="home">
