@@ -9,9 +9,15 @@ import ProductDetail from "../ProductDetail/ProductDetail"
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  }
+
+  const handleAddItemToCart = (productId) => {
+    shoppingCart.push(productId);
+    setShoppingCart(shoppingCart);
   }
   
   return (

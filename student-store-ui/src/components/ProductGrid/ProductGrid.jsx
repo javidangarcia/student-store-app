@@ -1,7 +1,6 @@
 import * as React from "react"
 import "./ProductGrid.css"
 import ProductCard from "../ProductCard/ProductCard"
-import { Link } from "react-router-dom"
 
 export default function ProductGrid({ products, selectedCategory, searchInput }) {
 
@@ -23,9 +22,7 @@ export default function ProductGrid({ products, selectedCategory, searchInput })
         {
         
         filteredProducts.map( (product) => (
-          <Link key={product.name} to={`/product/${product.id}`} className="product-link">
-            <ProductCard key={product.name} product={product}/>
-          </Link>
+          <ProductCard key={product.name} product={product}/>
         ))
 
         }

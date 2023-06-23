@@ -26,7 +26,7 @@ export default function ProductDetail(props) {
     return (
         <div className="product-detail">
             <h2>{product.name}</h2>
-            <img className="product-img" src={product.image} alt={`This is a picture of ${product.name}`} />
+            <img className="product-img" src={product.image} alt={`This is a picture of ${product.name}.`} />
             <div className="product-info">
                 <p>Price: ${product.price}</p>
                 <p>{product.description}</p>

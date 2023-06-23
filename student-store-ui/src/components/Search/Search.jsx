@@ -12,7 +12,7 @@ export default function Search({ setSelectedCategory, searchInput, setSearchInpu
                     value={searchInput}
                     onChange={ (event) => setSearchInput(event.target.value) }
             />
-            <button><i class="material-icons">search</i></button>
+            <button><i className="material-icons">search</i></button>
         </div>
         <div className="filter">
             {
