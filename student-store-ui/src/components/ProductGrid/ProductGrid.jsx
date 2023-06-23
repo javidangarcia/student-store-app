@@ -16,14 +16,17 @@ export default function ProductGrid({ products, selectedCategory, searchInput })
   }
 
   return (
-    <div className="product-grid">
-      {
-      
-      filteredProducts.map( (product) => {
-        return <ProductCard key={product.name} product={product}/>
-      })
+    <div id="Products" className="product-grid">
+      <h2>Best Selling Products</h2>
+      <div class="grid">
+        {
+        
+        filteredProducts.map( (product) => {
+          return <ProductCard key={product.name} product={product}/>
+        })
 
-      }
+        }
+      </div>
     </div>
   )
 }

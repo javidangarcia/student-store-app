@@ -7,32 +7,42 @@
 .search-bar input{
     padding: 10px;
     width: 40%;
+    border: 2px solid gray;
 }
 
 .search-bar button {
-    background: #00c385;
+    background: #00b4d8;
     border: none;
 }
 
 .search-bar i {
     height: 40px;
     width: 40px;
-    background: #00c385;
+    background: #00b4d8;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .filter {
     display: flex;
     justify-content: center;
+    margin: 40px 0px 30px 0px;
     gap: 20px;
 }
 
 .filter-options {
     padding: 10px;
-    background: #00c385;
+    width: 130px;
+    background: #00b4d8;
     border: none;
     color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.filter-options:hover {
+    background: #0077b6;
 }

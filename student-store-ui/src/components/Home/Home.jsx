@@ -30,7 +30,6 @@ export default function Home(props) {
     <div className="home">
       <Hero />
       <Search setSelectedCategory={setSelectedCategory} searchInput={searchInput} setSearchInput={setSearchInput}/>
-      <h2 id="Buy">Best Selling Products</h2>
       <ProductGrid products={products} selectedCategory={selectedCategory} searchInput={searchInput}/>
       <div id="About" className="about">
         <h3>About</h3>

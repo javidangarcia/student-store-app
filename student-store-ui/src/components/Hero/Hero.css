@@ -2,7 +2,7 @@
 
 .hero {
     display: flex;
-    background-color: #00c385;
+    background-color: #00b4d8;
     color: white;
     padding: 40px;
 }
@@ -19,7 +19,7 @@
 }
 
 .hero-text p {
-    font-size: 30px;
+    font-size: 22px;
     margin: 0px;
     margin-top: 20px;
 }
