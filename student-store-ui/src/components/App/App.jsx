@@ -29,8 +29,21 @@ export default function App() {
   }
 
   function removeItemFromCart(product) {
-    //const newShoppingCart = shoppingCart.filter( (oldProduct) => {return oldProduct.name != product.name} )
-    //setShoppingCart(newShoppingCart);
+    const productName = product.name;
+    const productPrice = product.price;
+    if (productName in shoppingCart) {
+
+      if (shoppingCart[productName].quantity === 1) {
+        const newShoppingCart = { ...shoppingCart }
+        delete newShoppingCart[productName];
+        setShoppingCart(newShoppingCart);
+      } else {
+        const newShoppingCart = { ...shoppingCart, [productName]: {price: productPrice, quantity: shoppingCart[productName].quantity - 1} };
+        setShoppingCart(newShoppingCart);
+      }
+
+    }
+
   }
   
   return (

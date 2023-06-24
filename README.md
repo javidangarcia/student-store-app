@@ -12,9 +12,9 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ### Walkthrough Video
 
-<a href="https://www.loom.com/share/21a9dbe14b184f54a4968ff2f4810e9d">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/21a9dbe14b184f54a4968ff2f4810e9d-with-play.gif">
-  </a>
+<a href="https://www.loom.com/share/8912c5e2ae234e3e9a40b9ab8e4ed92d">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8912c5e2ae234e3e9a40b9ab8e4ed92d-with-play.gif">
+</a>
 
 ## *Week 2* Application Features
 
@@ -30,7 +30,7 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 - [x] Users can click to expand the shopping cart in the left navigation.
 - [x] Users can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] Users can click the '-' button on a product cart to decrement that product in the shopping cart.
+- [x] Users can click the '-' button on a product cart to decrement that product in the shopping cart.
 - [x] The shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] Your choice! (Replace this bullet explaining what you implemented. Example: Users can leave ratings for products they have purchased.)
 
