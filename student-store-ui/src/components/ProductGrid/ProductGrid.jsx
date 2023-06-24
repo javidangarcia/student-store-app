@@ -2,7 +2,7 @@ import * as React from "react"
 import "./ProductGrid.css"
 import ProductCard from "../ProductCard/ProductCard"
 
-export default function ProductGrid({ products, selectedCategory, searchInput }) {
+export default function ProductGrid({ products, selectedCategory, searchInput, addItemToCart, removeItemFromCart }) {
 
   let filteredProducts;
   if (selectedCategory === "all categories") {
@@ -18,11 +18,11 @@ export default function ProductGrid({ products, selectedCategory, searchInput })
   return (
     <div id="Products" className="product-grid">
       <h2>Best Selling Products</h2>
-      <div class="grid">
+      <div className="grid">
         {
         
         filteredProducts.map( (product) => (
-          <ProductCard key={product.name} product={product}/>
+          <ProductCard key={product.name} product={product} addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>
         ))
 
         }

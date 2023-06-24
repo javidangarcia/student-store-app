@@ -25,3 +25,33 @@
     text-decoration: none;
     color: inherit;
 }
+
+.product-buttons {
+    display: flex;
+    justify-content: right;
+    margin-left: 5px;
+}
+
+.product-buttons i {
+    width: 25px;
+    height: 25px;
+    border: solid 2px #00b4d8;
+    color: #00b4d8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.product-buttons button {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 5px;
+}
+
+.product-buttons i:hover {
+    background-color: #00b4d8;
+    color: white;
+}

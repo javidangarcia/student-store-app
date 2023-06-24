@@ -21,14 +21,14 @@ export default function ProductDetail(props) {
         }
 
         fetchProducts();
-        }, []);
+    }, []);
 
     return (
         <div className="product-detail">
             <h2>{product.name}</h2>
             <img className="product-img" src={product.image} alt={`This is a picture of ${product.name}.`} />
             <div className="product-info">
-                <p>Price: ${product.price}</p>
+                {product.price && <p>Price: ${product.price.toFixed(2)}</p>}
                 <p>{product.description}</p>
                 <p>This is a product from our {product.category} category.</p>
             </div>

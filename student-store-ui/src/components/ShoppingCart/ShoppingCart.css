@@ -1,8 +1,25 @@
 .shopping-cart {
     text-align: center;
     color: white;
+    width: 90%;
 }
 
 .hidden {
     display: none;
+}
+
+.shopping-categories,
+.shopping-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-categories p,
+.shopping-product p {
+    width: 25%;
+}
+
+.shopping-total p {
+    font-weight: bold;
 }
