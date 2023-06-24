@@ -10,6 +10,12 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 - Add several products to the shopping cart.
 - Checkout and view the final receipt.
 
+### Walkthrough Video
+
+<a href="https://www.loom.com/share/21a9dbe14b184f54a4968ff2f4810e9d">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/21a9dbe14b184f54a4968ff2f4810e9d-with-play.gif">
+  </a>
+
 ## *Week 2* Application Features
 
 ### Core Features
