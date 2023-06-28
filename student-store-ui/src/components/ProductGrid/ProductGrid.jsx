@@ -6,13 +6,16 @@ export default function ProductGrid({ products, selectedCategory, searchInput, a
 
   let filteredProducts;
   if (selectedCategory === "all categories") {
-    filteredProducts = products;
+    filteredProducts = [...products];
   } else {
     filteredProducts = products.filter( (product) => {return product.category === selectedCategory} );
   }
 
   if (searchInput) {
-    filteredProducts = filteredProducts.filter( (product) => {return product.name.toLowerCase().includes(searchInput.toLowerCase())})
+    filteredProducts = filteredProducts.filter( (product) => {
+      return product.name.toLowerCase()
+        .includes(searchInput.toLowerCase())
+    })
   }
 
   return (
@@ -20,11 +23,11 @@ export default function ProductGrid({ products, selectedCategory, searchInput, a
       <h2>Best Selling Products</h2>
       <div className="grid">
         {
-        
-        filteredProducts.map( (product) => (
-          <ProductCard key={product.name} product={product} addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>
-        ))
 
+          filteredProducts.map( (product) => (
+            <ProductCard key={product.name} product={product} addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>
+          ))
+          
         }
       </div>
     </div>

@@ -1,0 +1,28 @@
+.checkout-form {
+    width: 80%;
+}
+
+.checkout-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form-input {
+    padding: 10px;
+    margin: 10px;
+}
+
+.checkout-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-button {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.receipt {
+    color: white;
+}

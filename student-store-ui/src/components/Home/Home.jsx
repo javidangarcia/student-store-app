@@ -19,10 +19,9 @@ export default function Home({ addItemToCart, removeItemFromCart }) {
         const data = response.data
         setProducts(data.products)
       } catch(error) {
-        console.log(error)
+        
       }
     }
-
     fetchProducts();
   }, []);
 

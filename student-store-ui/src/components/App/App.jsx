@@ -10,6 +10,11 @@ import ProductDetail from "../ProductDetail/ProductDetail"
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState({});
+  const [checkoutForm, setCheckoutForm] = useState({
+    "name": "",
+    "email": "",
+    "shoppingCart": {}
+  });
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -45,13 +50,35 @@ export default function App() {
     }
 
   }
+
+  function checkoutFormChange(name, value) {
+    let newCheckoutForm = { ...checkoutForm };
+    newCheckoutForm[name] = value;
+    setCheckoutForm(newCheckoutForm);
+  }
+
+  function resetShoppingCart() {
+    setCheckoutForm({
+      "name": "",
+      "email": "",
+      "shoppingCart": {}
+    });
+    setShoppingCart({});
+  }
+
+  function checkoutFormSubmit() {
+    const currShoppingCart = {...shoppingCart};
+    checkoutForm["shoppingCart"] = currShoppingCart;
+
+    resetShoppingCart();
+  }
   
   return (
     <div className="app">
       <BrowserRouter>
         <main>
           <Navbar />
-          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} shoppingCart={shoppingCart}/>
+          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} shoppingCart={shoppingCart} checkoutForm={checkoutForm} checkoutFormChange={checkoutFormChange} checkoutFormSubmit={checkoutFormSubmit}/>
           <Routes>
             <Route path="/" element={<Home addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>}></Route>
             <Route path="/product/:id" element={<ProductDetail />}></Route>

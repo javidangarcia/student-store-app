@@ -16,7 +16,7 @@ export default function ProductDetail(props) {
                 const data = response.data
             setProduct(data.product)
             } catch(error) {
-                console.log(error)
+                
             }
         }
 
