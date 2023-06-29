@@ -3,7 +3,7 @@ import "./ShoppingCart.css"
 
 export default function ShoppingCart({ isOpen, shoppingCart }) {
     const isShoppingCartEmpty = Object.keys(shoppingCart).length === 0;
-    let shoppingCartTotal = 0.00;
+    let subTotal = 0.00;
 
     return (
         <div className={isOpen ? "shopping-cart" : "shopping-cart hidden"}>
@@ -17,17 +17,22 @@ export default function ShoppingCart({ isOpen, shoppingCart }) {
             </div>
             {
                 Object.entries(shoppingCart).map( ([productName, productInfo]) => {
-                    shoppingCartTotal += productInfo.price * productInfo.quantity;
+                    const price = productInfo.price.toFixed(2);
+                    const quantity = productInfo.quantity;
+                    const total = (price * quantity).toFixed(2);
+                    subTotal += parseFloat(total);
                     return (<div className="shopping-product" key={productName}>
                         <p>{productName}</p>
-                        <p>{productInfo.quantity}</p>
-                        <p>${productInfo.price.toFixed(2)}</p>
-                        <p>${(productInfo.price * productInfo.quantity).toFixed(2)}</p>
+                        <p>{quantity}</p>
+                        <p>${price}</p>
+                        <p>${total}</p>
                     </div>)
                 })
             }
             <div className={isShoppingCartEmpty ? "hidden" : "shopping-total"}>
-                <p>Total Cost: {shoppingCartTotal.toFixed(2)}</p>
+                <p>Subtotal: ${subTotal.toFixed(2)}</p>
+                <p>Taxes and Fees: ${(subTotal * 0.09).toFixed(2)}</p>
+                <p>Total Cost: ${(subTotal + (subTotal * 0.09)).toFixed(2)}</p>
             </div>
             <div>
 

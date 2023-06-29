@@ -15,6 +15,7 @@ export default function App() {
     "email": "",
     "shoppingCart": {}
   });
+  const [newestOrder, setNewestOrder] = useState({});
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -67,9 +68,12 @@ export default function App() {
   }
 
   function checkoutFormSubmit() {
-    const currShoppingCart = {...shoppingCart};
-    checkoutForm["shoppingCart"] = currShoppingCart;
+    const currentShoppingCart = {...shoppingCart};
+    checkoutForm["shoppingCart"] = currentShoppingCart;
 
+    const currentCheckoutForm = {...checkoutForm};
+    setNewestOrder(currentCheckoutForm);
+    
     resetShoppingCart();
   }
   
@@ -78,7 +82,15 @@ export default function App() {
       <BrowserRouter>
         <main>
           <Navbar />
-          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} shoppingCart={shoppingCart} checkoutForm={checkoutForm} checkoutFormChange={checkoutFormChange} checkoutFormSubmit={checkoutFormSubmit}/>
+          <Sidebar 
+              isOpen={isOpen} 
+              toggleSidebar={toggleSidebar} 
+              shoppingCart={shoppingCart} 
+              checkoutForm={checkoutForm} 
+              checkoutFormChange={checkoutFormChange} 
+              checkoutFormSubmit={checkoutFormSubmit} 
+              newestOrder={newestOrder}
+          />
           <Routes>
             <Route path="/" element={<Home addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>}></Route>
             <Route path="/product/:id" element={<ProductDetail />}></Route>

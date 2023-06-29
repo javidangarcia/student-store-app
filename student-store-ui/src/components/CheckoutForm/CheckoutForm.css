@@ -24,5 +24,10 @@
 }
 
 .receipt {
+    margin-top: 40px;
     color: white;
+}
+
+.receipt-name {
+    text-align: center;
 }
