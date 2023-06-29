@@ -31,6 +31,7 @@ export default function App() {
       const newShoppingCart = { ...shoppingCart, [productName]: {price: productPrice, quantity: 1} };
       setShoppingCart(newShoppingCart);
     }
+    console.log(shoppingCart);
 
   }
 
@@ -92,7 +93,7 @@ export default function App() {
               newestOrder={newestOrder}
           />
           <Routes>
-            <Route path="/" element={<Home addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>}></Route>
+            <Route path="/" element={<Home addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart} shoppingCart={shoppingCart}/>}></Route>
             <Route path="/product/:id" element={<ProductDetail />}></Route>
           </Routes>
         </main>

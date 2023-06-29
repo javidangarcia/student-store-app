@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
 })
 
 router.get("/:productId", async (req, res) => {
-    const productId = req.params.productId;
+    const {productId} = req.params;
     const product = Store.getProductById(productId);
     res.status(200).json(product);
 })

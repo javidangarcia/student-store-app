@@ -6,7 +6,7 @@ import Search from "../Search/Search"
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
-export default function Home({ addItemToCart, removeItemFromCart }) {
+export default function Home({ addItemToCart, removeItemFromCart, shoppingCart }) {
   const [selectedCategory, setSelectedCategory] = useState("all categories");
   const [searchInput, setSearchInput] = useState("");
   const [products, setProducts] = useState([]);
@@ -29,7 +29,7 @@ export default function Home({ addItemToCart, removeItemFromCart }) {
     <div className="home">
       <Hero />
       <Search setSelectedCategory={setSelectedCategory} searchInput={searchInput} setSearchInput={setSearchInput}/>
-      <ProductGrid products={products} selectedCategory={selectedCategory} searchInput={searchInput} addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart}/>
+      <ProductGrid products={products} selectedCategory={selectedCategory} searchInput={searchInput} addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart} shoppingCart={shoppingCart}/>
       <div id="About" className="about">
         <h3>About</h3>
         <p>The codepath student store offers great products at great prices from a great team and for a great cause.</p>

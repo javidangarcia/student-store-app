@@ -11,11 +11,11 @@ export default function Sidebar({ isOpen, toggleSidebar, shoppingCart, checkoutF
       </button>
       <ShoppingCart isOpen={isOpen} shoppingCart={shoppingCart}/>
       <CheckoutForm 
-          isOpen={isOpen} 
-          shoppingCart={shoppingCart} 
-          checkoutForm={checkoutForm} 
-          checkoutFormChange={checkoutFormChange} 
-          checkoutFormSubmit={checkoutFormSubmit} 
+          isOpen={isOpen}
+          shoppingCart={shoppingCart}
+          checkoutForm={checkoutForm}
+          checkoutFormChange={checkoutFormChange}
+          checkoutFormSubmit={checkoutFormSubmit}
           newestOrder={newestOrder}
       />
     </section>

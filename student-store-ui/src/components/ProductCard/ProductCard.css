@@ -10,10 +10,22 @@
     width: 246px;
 }
 
+.product-name-quantity {
+    display: flex;
+    justify-content: space-between;
+}
+
 .product-name {
     font-weight: 600;
     margin: 0px;
     padding: 5px 0px 5px 10px;
+}
+
+.product-quantity {
+    font-weight: 600;
+    margin: 0px;
+    margin: 5px 10px 0px 10px;
+    color:  #00b4d8;
 }
 
 .product-price {
