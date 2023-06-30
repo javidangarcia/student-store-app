@@ -41,7 +41,7 @@ export default function CheckoutForm({ isOpen, shoppingCart, checkoutForm, check
                         const total = (price * quantity).toFixed(2);
                         subTotal += parseFloat(total);
                         return (
-                            <p>- {quantity} total {productName} purchased at a cost of ${price} for a total cost of ${total}.</p>
+                            <p key={productName}>- {quantity} total {productName} purchased at a cost of ${price} for a total cost of ${total}.</p>
                         )
                     })}
                     <p>Before taxes, the subtotal was ${subTotal.toFixed(2)}.</p>

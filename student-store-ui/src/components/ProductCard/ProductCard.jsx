@@ -13,7 +13,7 @@ export default function ProductCard({ product, addItemToCart, removeItemFromCart
         <Link key={product.name} to={`/product/${product.id}`} className="product-link">
           <img src={product.image} alt="" />
         </Link>
-        <div class="product-name-quantity">
+        <div className="product-name-quantity">
           <p className="product-name">{product.name}</p>
           {productQuantity && <p className="product-quantity">{productQuantity}</p>}
         </div>

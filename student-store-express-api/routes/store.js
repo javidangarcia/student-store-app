@@ -13,4 +13,10 @@ router.get("/:productId", async (req, res) => {
     res.status(200).json(product);
 })
 
+router.post("/", async (req, res) => {
+    const purchase = req.body;
+    Store.recordPurchase(purchase);
+    res.status(201).json({ purchase: purchase });
+})
+
 module.exports = router;

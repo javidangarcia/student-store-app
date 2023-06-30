@@ -11,6 +11,16 @@ class Store {
         const product = products[id - 1];
         return product;
     }
+
+    static listPurchases() {
+        const purchases = storage.get("purchases").value();
+        return purchases;
+    }
+
+    static recordPurchase(purchase) {
+        storage.get("purchases").push(purchase).write();
+        return purchase;
+    }
 }
 
 module.exports = Store;

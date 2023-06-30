@@ -6,6 +6,7 @@ import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import { useState } from "react"
 import ProductDetail from "../ProductDetail/ProductDetail"
+import axios from "axios"
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,6 @@ export default function App() {
       const newShoppingCart = { ...shoppingCart, [productName]: {price: productPrice, quantity: 1} };
       setShoppingCart(newShoppingCart);
     }
-    console.log(shoppingCart);
 
   }
 
@@ -68,11 +68,18 @@ export default function App() {
     setShoppingCart({});
   }
 
-  function checkoutFormSubmit() {
+  async function checkoutFormSubmit() {
     const currentShoppingCart = {...shoppingCart};
     checkoutForm["shoppingCart"] = currentShoppingCart;
 
     const currentCheckoutForm = {...checkoutForm};
+    
+    try { // This is a work in progress...
+      const response = await axios.post("http://localhost:3001/store", currentCheckoutForm);
+    } catch(error) {
+      
+    }
+
     setNewestOrder(currentCheckoutForm);
     
     resetShoppingCart();
