@@ -19,6 +19,7 @@ export default function App() {
     "shoppingCart": {}
   });
   const [newestOrder, setNewestOrder] = useState({});
+  const [searchPurchaseInput, setSearchPurchaseInput] = useState("");
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -104,7 +105,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart} shoppingCart={shoppingCart}/>}></Route>
             <Route path="/product/:id" element={<ProductDetail />}></Route>
-            <Route path="/store/purchases" element={<Purchases />}></Route>
+            <Route path="/store/purchases" element={<Purchases searchPurchaseInput={searchPurchaseInput} setSearchPurchaseInput={setSearchPurchaseInput} />}></Route>
             <Route path="/store/purchases/:orderID" element={<PurchaseDetail />}></Route>
           </Routes>
         </main>

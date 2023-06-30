@@ -225,6 +225,24 @@
           "quantity": 5
         }
       }
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "email": "markzuckerberg@meta.com",
+      "shoppingCart": {
+        "Cinnamon Rolls": {
+          "price": 2.99,
+          "quantity": 5
+        },
+        "Alpaca Wool Scarf": {
+          "price": 34.99,
+          "quantity": 8
+        },
+        "Mouse from 1998": {
+          "price": 19.98,
+          "quantity": 10
+        }
+      }
     }
   ]
 }

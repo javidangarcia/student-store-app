@@ -3,8 +3,9 @@ import "./Purchases.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import PurchaseSearch from "../PurchaseSearch/PurchaseSearch";
 
-export default function Purchases(props) {
+export default function Purchases({ searchPurchaseInput, setSearchPurchaseInput }) {
     const [purchases, setPurchases] = useState([]);
     let orderID = 1;
 
@@ -22,11 +23,22 @@ export default function Purchases(props) {
         fetchPurchases();
     }, []);
 
+    let filteredPurchases = [...purchases];
+
+    if (searchPurchaseInput) {
+        filteredPurchases = filteredPurchases.filter( (purchase) => {
+          return purchase.name.toLowerCase()
+            .includes(searchPurchaseInput.toLowerCase())
+        })
+    }
+
+
     return (
 
         <div className="purchases">
+            <PurchaseSearch searchPurchaseInput={searchPurchaseInput} setSearchPurchaseInput={setSearchPurchaseInput}/>
             <div className="orders">
-                {purchases.map((order) => (
+                {filteredPurchases.map((order) => (
                     <Link key={orderID} to={`/store/purchases/${orderID}`} className="order-link">
                         <div className="order" key={orderID++}>
                             <p>Order #{orderID}</p>
