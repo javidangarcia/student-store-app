@@ -145,5 +145,86 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "name": "Adrian Fernandez",
+      "email": "adrianfersa@meta.com",
+      "shoppingCart": {
+        "Matching Rings": {
+          "price": 200,
+          "quantity": 1
+        },
+        "Bar Code Shirts": {
+          "price": 19.99,
+          "quantity": 1
+        },
+        "Fruit Medley": {
+          "price": 7.5,
+          "quantity": 1
+        }
+      }
+    },
+    {
+      "name": "Carlos Moreno",
+      "email": "carlosmoreno@meta.com",
+      "shoppingCart": {
+        "Flamin Hot Cheetos": {
+          "price": 1.5,
+          "quantity": 10
+        },
+        "Pullover Sweater": {
+          "price": 4.99,
+          "quantity": 1
+        },
+        "Striped Socks": {
+          "price": 4.99,
+          "quantity": 5
+        },
+        "Mouse from 1998": {
+          "price": 19.98,
+          "quantity": 1
+        },
+        "Fruit Medley": {
+          "price": 7.5,
+          "quantity": 2
+        }
+      }
+    },
+    {
+      "name": "Javier Garcia",
+      "email": "javierdangarcia@meta.com",
+      "shoppingCart": {
+        "Cinnamon Rolls": {
+          "price": 2.99,
+          "quantity": 6
+        },
+        "Flamin Hot Cheetos": {
+          "price": 1.5,
+          "quantity": 4
+        },
+        "Rice Krispies": {
+          "price": 0.99,
+          "quantity": 5
+        }
+      }
+    },
+    {
+      "name": "Lebron James",
+      "email": "lebronjames@gmail.com",
+      "shoppingCart": {
+        "Rice Krispies": {
+          "price": 0.99,
+          "quantity": 4
+        },
+        "Bar Code Shirts": {
+          "price": 19.99,
+          "quantity": 5
+        },
+        "Striped Socks": {
+          "price": 4.99,
+          "quantity": 5
+        }
+      }
+    }
+  ]
 }

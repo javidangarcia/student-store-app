@@ -7,6 +7,8 @@ import Home from "../Home/Home"
 import { useState } from "react"
 import ProductDetail from "../ProductDetail/ProductDetail"
 import axios from "axios"
+import Purchases from "../Purchases/Purchases"
+import PurchaseDetail from "../PurchaseDetail/PurchaseDetail"
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,7 +76,7 @@ export default function App() {
 
     const currentCheckoutForm = {...checkoutForm};
     
-    try { // This is a work in progress...
+    try {
       const response = await axios.post("http://localhost:3001/store", currentCheckoutForm);
     } catch(error) {
       
@@ -102,6 +104,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home addItemToCart={addItemToCart} removeItemFromCart={removeItemFromCart} shoppingCart={shoppingCart}/>}></Route>
             <Route path="/product/:id" element={<ProductDetail />}></Route>
+            <Route path="/store/purchases" element={<Purchases />}></Route>
+            <Route path="/store/purchases/:orderID" element={<PurchaseDetail />}></Route>
           </Routes>
         </main>
       </BrowserRouter>

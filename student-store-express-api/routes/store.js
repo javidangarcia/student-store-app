@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router();
 const Store = require("../models/store")
 
+router.get("/purchases", async (req, res) => {
+    const purchases = Store.listPurchases();
+    res.status(200).json(purchases);
+})
+
 router.get("/", async (req, res) => {
     const products = Store.listProducts();
     res.status(200).json(products);
