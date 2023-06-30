@@ -6,7 +6,7 @@ import axios from "axios"
  
 export default function ProductDetail(props) {
     const { id } = useParams();
-    const [product, setProduct] = useState("");
+    const [product, setProduct] = useState({});
 
     useEffect( () => {
         const fetchProducts = async () => {

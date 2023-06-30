@@ -1,3 +1,5 @@
 .purchase-detail {
-    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
 }

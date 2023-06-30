@@ -17,6 +17,12 @@ class Store {
         return purchases;
     }
 
+    static getPurchaseById(orderID) {
+        const purchases = Store.listPurchases();
+        const purchase = purchases[orderID - 1];
+        return purchase;
+    }
+
     static recordPurchase(purchase) {
         storage.get("purchases").push(purchase).write();
         return purchase;

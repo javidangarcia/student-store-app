@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function Purchases() {
+export default function Purchases(props) {
     const [purchases, setPurchases] = useState([]);
     let orderID = 1;
 
