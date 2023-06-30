@@ -209,37 +209,11 @@
       }
     },
     {
-      "name": "Lebron James",
-      "email": "lebronjames@gmail.com",
-      "shoppingCart": {
-        "Rice Krispies": {
-          "price": 0.99,
-          "quantity": 4
-        },
-        "Bar Code Shirts": {
-          "price": 19.99,
-          "quantity": 5
-        },
-        "Striped Socks": {
-          "price": 4.99,
-          "quantity": 5
-        }
-      }
-    },
-    {
       "name": "Mark Zuckerberg",
       "email": "markzuckerberg@meta.com",
       "shoppingCart": {
-        "Cinnamon Rolls": {
-          "price": 2.99,
-          "quantity": 5
-        },
-        "Alpaca Wool Scarf": {
-          "price": 34.99,
-          "quantity": 8
-        },
-        "Mouse from 1998": {
-          "price": 19.98,
+        "Smart Glasses": {
+          "price": 999.99,
           "quantity": 10
         }
       }

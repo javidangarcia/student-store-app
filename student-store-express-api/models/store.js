@@ -27,6 +27,13 @@ class Store {
         storage.get("purchases").push(purchase).write();
         return purchase;
     }
+
+    static deletePurchase(orderID) {
+        const adjustedOrderID = orderID - 1;
+        const purchases = Store.listPurchases();
+        const purchaseIndex = purchases.findIndex(purchase => (purchase.orderID === adjustedOrderID));
+        storage.get("purchases").splice(purchaseIndex, 1).write();
+    }
 }
 
 module.exports = Store;

@@ -30,4 +30,11 @@ router.post("/", async (req, res) => {
     res.status(201).json({ purchase: purchase });
 })
 
+// Delete Purchases Endpoint
+router.post("/purchases/:productId", async (req, res) => {
+    const { productId } = req.params;
+    Store.deletePurchase(productId);
+    res.status(201).send("Purchase successfully deleted.")
+})
+
 module.exports = router;
