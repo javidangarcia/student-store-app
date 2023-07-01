@@ -15,10 +15,9 @@ export default function PurchaseDetail(props) {
                 const url = `http://localhost:3001/store/purchases/${orderID}`;
                 const response = await axios.get(url);
                 const data = response.data;
-                console.log(data);
                 setPurchase(data);
             } catch (error) {
-                console.log(error);
+                
             }
         };
         fetchPurchases();

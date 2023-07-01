@@ -217,6 +217,24 @@
           "quantity": 10
         }
       }
+    },
+    {
+      "name": "Javier Garcia",
+      "email": "javi@gmail.com",
+      "shoppingCart": {
+        "Cinnamon Rolls": {
+          "price": 2.99,
+          "quantity": 7
+        },
+        "Knitted Beanie": {
+          "price": 19.99,
+          "quantity": 6
+        },
+        "Striped Socks": {
+          "price": 4.99,
+          "quantity": 3
+        }
+      }
     }
   ]
 }
